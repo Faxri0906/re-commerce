@@ -7,7 +7,7 @@ export default function SingleProduct() {
     const {productId} = useParams();
     const [product,setProduct] = useState(null);
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products/'+productId).then((res) => {
+    axios.get('http://localhost:3000/products/'+productId).then((res) => {
       setProduct(res.data);
     });
   });

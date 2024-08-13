@@ -3,6 +3,8 @@ import HomePage from "./pages/home";
 import ProductsPage from "./pages/products";
 import Layout from "./Layout";
 import SingleProduct from "./pages/single-product";
+import AddProductPage from "./pages/add-product";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -23,6 +25,10 @@ export default function App() {
           element: <SingleProduct />,
         },
         {
+          path: '/add-product',
+          element: <AddProductPage/>,
+        },
+        {
           path: '/about',
           element: <ProductsPage />,
         },
@@ -34,7 +40,10 @@ export default function App() {
     },
   ]);
   return (
-    <RouterProvider router={router}/>
+    <>
+      <Toaster />
+      <RouterProvider router={router}/>
+    </>
     //<BrowserRouter>
       //<Routes>
         //<Route path="/" element={<Layout />}>

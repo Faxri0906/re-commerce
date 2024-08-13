@@ -6,7 +6,7 @@ import Loading from "../../components/Loading";
 function HomePage() {
   const [products,setProducts] = useState(null);
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products').then((res) => {
+    axios.get('http://localhost:3000/products').then((res) => {
       setProducts(res.data);
     });
   });

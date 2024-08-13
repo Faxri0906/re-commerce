@@ -16,9 +16,7 @@ export default function Card({image,description,title,price,category,id}) {
         <h1 className="text-xl font-regular text-slate-900">
             {category}
         </h1>
-        <p className="line-clamp-3 opacity-65">
-            {description}
-        </p>
+        <p className="line-clamp-3 opacity-65 [&>ul]:!list-disc [&>ul]:m-5" dangerouslySetInnerHTML={{__html: description}}></p>
         <p className="font-semibold text-2xl mt-auto">
             {price}$
         </p>

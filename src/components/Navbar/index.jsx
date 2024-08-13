@@ -16,6 +16,10 @@ const links = [
         href: '/about',
     },
     {
+        title: 'Add-product',
+        href: '/add-product',
+    },
+    {
         title: 'Contacts',
         href: '/contacts',
     },
@@ -35,7 +39,7 @@ function Navbar() {
     },[location.pathname]);
   return <header className="bg-white border-b-[2px] border-b-slate-200 py-4">
         <nav className="container flex justify-between items-center">
-            <div className="font-semibold text-blue-400 text-2xl">re:<span>commerce</span></div>
+            <div className="font-semibold text-blue-400 text-2xl">re:<span className="text-black">commerce</span></div>
             <ul className={`fixed md:static transition-all duration-500 ease-in-out top-0 p-12 z-10 md:justify-end backdrop-blur-md bg-white/50 w-1/2 h-full flex flex-col md:flex-row md:p-0 md:items-center gap-4 text-xl ${isNavOpen ? 'right-0' : '-right-full'}`}>
                 {links.map((link) => (
                     <li className="hover:text-blue-400" key={link.href}>
