@@ -6,7 +6,7 @@ export default function Card({image,description,title,price,category,id}) {
         navigate('/products/'+id);
     };
   return (
-    <div className="border-[2px] rounded-xl p-4 items-start border-black cursor-pointer flex flex-col gap-2">
+    <div className="border-[2px] rounded-xl p-4 items-start border-black flex flex-col gap-2">
         <div className="h-[200px] w-full">
             <img className="object-contain w-full h-full" src={image}/>
         </div>
